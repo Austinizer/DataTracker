@@ -23,8 +23,8 @@ async function fetchPlayerData(playerNameOrID) {
         return {
           'User ID': steamid,
           'Name': playerInfo.Name,
-          'Playtime': round(playerInfo.Playtime / 360, 1),
-          'Points': playerInfo.Points,
+          'Playtime': round(playerInfo.Playtime / 3600, 1),
+          'Points': round(playerInfo.Points, 0),
           'Lives': playerInfo.Lives,
           'Weight': playerInfo.Weight
         };
