@@ -66,7 +66,7 @@ async function search() {
     document.getElementById('playerInput').classList.add('invalid-input');
     setTimeout(() => {
       document.getElementById('playerInput').classList.remove('invalid-input');
-    }, 1000); // Reset the style after 1 second
+    }, 500); // Reset the style after 0.5 seconds
   }
 }
 

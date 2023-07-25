@@ -1,71 +1,23 @@
-/* CSS styles (You can add more styles here) */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0; /* Light bluish gray */
+  background-color: #36393f;
+  color: #fff;
 }
 
 .container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff; /* White background */
+  border-radius: 8px;
+  background-color: #40444b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  color: #444; /* Dark bluish gray */
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  font-weight: bold;
-  color: #444; /* Dark bluish gray */
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.suggestions {
-  display: none;
-  border: 1px solid #ccc;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-  background-color: #f9f9f9; /* Lighter bluish gray */
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f2f5;
-}
-
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  color: #34515e;
+  color: #fff;
   margin-bottom: 20px;
 }
 
@@ -76,44 +28,43 @@ h1 {
 .form-group label {
   display: block;
   font-weight: bold;
-  color: #34515e;
 }
 
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f7f9fa;
-  color: #34515e;
+  border: none;
+  border-radius: 4px;
+  background-color: #40444b;
+  color: #fff;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #51a0d5;
+  background-color: #4a4d54;
 }
 
 .form-group button {
   padding: 12px;
-  background-color: #51a0d5;
-  color: #ffffff;
+  background-color: #7289da;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .form-group button:hover {
-  background-color: #408ec4;
+  background-color: #677bc4;
 }
 
 .suggestions {
   max-height: 200px;
   overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f7f9fa;
-  color: #34515e;
+  border: none;
+  border-radius: 4px;
+  background-color: #40444b;
+  color: #fff;
   padding: 5px;
 }
 
@@ -124,7 +75,7 @@ h1 {
 }
 
 .suggestion:hover {
-  background-color: #e5f0f9;
+  background-color: #4a4d54;
 }
 
 .player-list {
@@ -140,22 +91,22 @@ h1 {
 }
 
 .player-list li:hover {
-  background-color: #e5f0f9;
+  background-color: #4a4d54;
 }
 
 .result {
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: none;
   padding: 10px;
-  border-radius: 5px;
-  background-color: #f7f9fa;
-  color: #34515e;
+  border-radius: 4px;
+  background-color: #40444b;
+  color: #fff;
 }
 
 .result h2 {
   margin-top: 0;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #7289da;
 }
 
 
