@@ -58,8 +58,15 @@ async function search() {
       <p>Lives: ${playerInfo.Lives}</p>
       <p>Weight: ${playerInfo.Weight}</p>
     `;
+    // Reset the search bar style when a valid player is found
+    document.getElementById('playerInput').classList.remove('invalid-input');
   } else {
     resultArea.innerHTML = "<h2>Player Data</h2><p>No data found.</p>";
+    // Apply the invalid-input class to the search bar for red pulse and shake animation
+    document.getElementById('playerInput').classList.add('invalid-input');
+    setTimeout(() => {
+      document.getElementById('playerInput').classList.remove('invalid-input');
+    }, 1000); // Reset the style after 1 second
   }
 }
 
