@@ -8,11 +8,14 @@
 </head>
 <body>
     <div class="container">
+        <h1>Player Data Finder</h1>
         <div class="form-group">
             <label for="playerInput">Enter player name or ID:</label>
             <input type="text" id="playerInput" placeholder="Enter name or ID">
-            <button onclick="search()">Search</button>
+            <div class="suggestions" id="suggestionsArea"></div>
         </div>
+
+        <ul class="player-list" id="playerList"></ul>
 
         <div class="result" id="resultArea">
             <h2>Player Data</h2>
@@ -23,3 +26,4 @@
     <script src="app.js"></script>
 </body>
 </html>
+

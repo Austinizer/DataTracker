@@ -1,53 +1,105 @@
 /* CSS styles (You can add more styles here) */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group button {
-    padding: 8px 12px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .result {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .result h2 {
-    margin-top: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0; /* Light bluish gray */
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* White background */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #444; /* Dark bluish gray */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #444; /* Dark bluish gray */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.suggestions {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background-color: #f9f9f9; /* Lighter bluish gray */
+}
+
+.suggestion {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #ddd; /* Hover color */
+}
+
+.form-group input:focus + .suggestions {
+  display: block;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #4CAF50; /* Green button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f0f0f0; /* Light bluish gray */
+}
+
+.result h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  color: #444; /* Dark bluish gray */
+}
+
+.player-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9; /* Lighter bluish gray */
+}
+
+.player-list li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.player-list li:hover {
+  background-color: #ddd; /* Hover color */
+}
