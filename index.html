@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Data Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="playerInput">Enter player name or ID:</label>
+            <input type="text" id="playerInput" placeholder="Enter name or ID">
+            <button onclick="search()">Search</button>
+        </div>
+
+        <div class="result" id="resultArea">
+            <h2>Player Data</h2>
+            <p>No data found</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
