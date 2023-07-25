@@ -1,28 +1,29 @@
 async function fetchPlayerData(playerNameOrID) {
-    try {
-      const response = await fetch('data.json');
-      if (!response.ok) {
-        throw new Error('Failed to fetch data');
+  try {
+    const response = await fetch('data.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
+    const data = await response.json();
+    const steamids = data.Steamid[0];
+
+    for (const steamid in steamids) {
+      const playerInfo = steamids[steamid];
+      if (playerInfo && playerInfo.Name &&
+        (playerInfo.Name.toLowerCase() === playerNameOrID.toLowerCase() ||
+        steamid === playerNameOrID)
+      ) {
+        // ...
       }
-      const data = await response.json();
-      const steamids = data.Steamid[0];
-  
-      for (const steamid in steamids) {
-        const playerInfo = steamids[steamid];
-        if (
-          playerInfo.Name.toLowerCase() === playerNameOrID.toLowerCase() ||
-          steamid === playerNameOrID
-        ) {
-          return {
-            'User ID': steamid,
-            'Name': playerInfo.Name,
-            'Playtime': round(playerInfo.Playtime / 360, 1),
-            'Points': playerInfo.Points,
-            'Lives': playerInfo.Lives,
-            'Weight': playerInfo.Weight
-          };
-        }
-      }
+    }
+
+    // ...
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
   
       return null;
     } catch (error) {
