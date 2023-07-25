@@ -15,7 +15,7 @@ async function fetchPlayerData(playerNameOrID) {
 
       if (
         playerInfo &&
-        playerInfo.Name &&
+        playerInfo.Name && typeof playerInfo.Name === "string" &&
         (playerInfo.Name.toLowerCase() === playerNameOrID.toLowerCase() ||
           steamid === playerNameOrID)
       ) {
@@ -37,6 +37,7 @@ async function fetchPlayerData(playerNameOrID) {
     return null;
   }
 }
+
 
   
   function round(value, decimals) {
