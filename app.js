@@ -7,30 +7,37 @@ async function fetchPlayerData(playerNameOrID) {
     const data = await response.json();
     const steamids = data.Steamid[0];
 
+    console.log('PlayerNameOrID:', playerNameOrID); // Debugging line
+
     for (const steamid in steamids) {
       const playerInfo = steamids[steamid];
-      if (playerInfo && playerInfo.Name &&
+      console.log('SteamID:', steamid, 'PlayerInfo:', playerInfo); // Debugging line
+
+      if (
+        playerInfo &&
+        playerInfo.Name &&
         (playerInfo.Name.toLowerCase() === playerNameOrID.toLowerCase() ||
-        steamid === playerNameOrID)
+          steamid === playerNameOrID)
       ) {
-        // ...
+        console.log('PlayerData:', playerInfo); // Debugging line
+        return {
+          'User ID': steamid,
+          'Name': playerInfo.Name,
+          'Playtime': round(playerInfo.Playtime / 360, 1),
+          'Points': playerInfo.Points,
+          'Lives': playerInfo.Lives,
+          'Weight': playerInfo.Weight
+        };
       }
     }
 
-    // ...
+    return null;
   } catch (error) {
     console.error(error);
     return null;
   }
 }
 
-  
-      return null;
-    } catch (error) {
-      console.error(error);
-      return null;
-    }
-  }
   
   function round(value, decimals) {
     return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
