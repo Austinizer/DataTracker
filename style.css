@@ -46,32 +46,118 @@ h1 {
   background-color: #f9f9f9; /* Lighter bluish gray */
 }
 
-.suggestion {
-  padding: 8px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #34515e;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  color: #34515e;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f9fa;
+  color: #34515e;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #51a0d5;
+}
+
+.form-group button {
+  padding: 12px;
+  background-color: #51a0d5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-group button:hover {
+  background-color: #408ec4;
+}
+
+.suggestions {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f9fa;
+  color: #34515e;
+  padding: 5px;
+}
+
+.suggestion {
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .suggestion:hover {
-  background-color: #ddd; /* Hover color */
+  background-color: #e5f0f9;
 }
 
-.form-group input:focus + .suggestions {
-  display: block;
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 0, 0, 0.5);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 rgba(255, 0, 0, 0.5);
-  }
+
+.player-list li {
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.2s ease-in-out;
 }
+
+.player-list li:hover {
+  background-color: #e5f0f9;
+}
+
+.result {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f7f9fa;
+  color: #34515e;
+}
+
+.result h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
 
 @keyframes shake {
   0%, 100% {
