@@ -38,7 +38,7 @@ async function fetchPlayerData(playerNameOrID) {
   async function search() {
     const resultArea = document.getElementById('resultArea');
     const input = document.getElementById('playerInput').value.trim();
-  
+    console.log("Button clicked!"); // Add this line for testing
     if (!input) {
       resultArea.innerHTML = "<h2>Player Data</h2><p>Please enter a name or ID.</p>";
       return;
